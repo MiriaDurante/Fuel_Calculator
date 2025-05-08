@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FuelCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/med_blue</item>
+        <item name="android:statusBarColor">@color/med_blue</item>
+        
+    </style>
+
+    <style name="Theme.FuelCalculator" parent="Base.Theme.FuelCalculator" />
+</resources>
