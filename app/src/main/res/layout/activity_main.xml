@@ -4,25 +4,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/beige"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/appBackground"
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/splash_screen" />
+        android:layout_height="400dp"
+        android:background="@drawable/rounded_gradient"/>
+
 
     <ImageView
-        android:id="@+id/gasStationIcon"
-        android:layout_width="110dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/gas_station_simb"
+        android:id="@+id/Small_car"
+        android:layout_width="234dp"
+        android:layout_height="262dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="204dp"
+        android:src="@drawable/img_vintage_car"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <Button
         android:id="@+id/btn_start"
@@ -44,12 +44,12 @@
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="115dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:text="Fuel cost calculator"
         android:textColor="@color/beige"
-        android:textSize="50sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,12 +63,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="40dp"
         android:text="Know exactly how much you spend on each journey, quickly and easily!"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="21sp"
+        android:textColor="@color/med_blue"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
