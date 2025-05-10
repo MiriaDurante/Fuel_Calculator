@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beige"
-    tools:context=".KmActivity">
+    tools:context=".CarEfficiencyActivity">
 
     <LinearLayout
         android:id="@+id/vg_header"
@@ -24,12 +24,12 @@
         android:layout_height="262dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="160dp"
-        android:src="@drawable/img_localization"
+        android:src="@drawable/undrawc_car"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_Km"
+        android:id="@+id/btn_Car"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -44,13 +44,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/Km_text"
+        android:id="@+id/Car_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="35dp"
-        android:text="How far are you going? Enter the total kilometers for your journey."
+        android:text="Enter your car's fuel consumption (km per liter) to complete your calculation."
         android:textColor="@color/beige"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_km"
+        android:id="@+id/edt_Car"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -66,15 +66,14 @@
         android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Km_text">
+        app:layout_constraintTop_toBottomOf="@+id/Car_text">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditTextKm"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@drawable/rounded_bg"
-            android:hint="Enter the distance here (km):"
-            android:inputType="numberDecimal" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextCar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_bg"
+        android:hint="Fuel consumption (km/l)"
+        android:inputType="numberDecimal" />
+</com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
