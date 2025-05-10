@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beige"
-    tools:context=".KmActivity">
+    tools:context=".FuelActivity">
 
     <LinearLayout
         android:id="@+id/vg_header"
@@ -16,20 +16,19 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <ImageView
-        android:id="@+id/drive_road"
-        android:layout_width="250dp"
-        android:layout_height="262dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="160dp"
-        android:src="@drawable/img_localization"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/drive_road"
+            android:layout_width="250dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="165dp"
+            android:layout_marginStart="120dp"
+            android:src="@drawable/img_navigator" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btn_Km"
+        android:id="@+id/btn_FuelCost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -44,13 +43,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/Km_text"
+        android:id="@+id/Fuel_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="35dp"
-        android:text="How far are you going? Enter the total kilometers for your journey."
+        android:text="Enter the current price of fuel per liter."
         android:textColor="@color/beige"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_km"
+        android:id="@+id/edt_Fuel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -66,14 +65,14 @@
         android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Km_text">
+        app:layout_constraintTop_toBottomOf="@+id/Fuel_text">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditTextKm"
+            android:id="@+id/textInputEditTextFuel"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/rounded_bg"
-            android:hint="Enter the distance here (km):"
+            android:hint="Enter the price here:"
             android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
