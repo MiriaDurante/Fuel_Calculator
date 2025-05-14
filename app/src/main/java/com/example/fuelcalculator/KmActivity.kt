@@ -27,6 +27,7 @@ class KmActivity : AppCompatActivity() {
                     val km = kmValue.toDouble()
                     if (km > 0) {
                         val intent = Intent(this, FuelActivity::class.java)
+                        intent.putExtra(KEY_KM,km)
                         startActivity(intent)
                     } else {
 
