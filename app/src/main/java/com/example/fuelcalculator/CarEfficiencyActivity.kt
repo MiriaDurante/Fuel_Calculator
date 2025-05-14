@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 
+const val KEY_FUEL = "FuelActivity.key"
+
 class CarEfficiencyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +18,8 @@ class CarEfficiencyActivity : AppCompatActivity() {
 
         val carButton = findViewById<Button>(R.id.btn_Car)
         val carEditText = findViewById<TextInputEditText>(R.id.textInputEditTextCar)
+        val km = intent.getFloatExtra(KEY_KM,0f)
+        val fuel = intent.getFloatExtra(KEY_FUEL,0f)
 
         carButton.setOnClickListener {
             val carValue = carEditText.text.toString()
@@ -29,6 +33,9 @@ class CarEfficiencyActivity : AppCompatActivity() {
 
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra("CAR_CONSUMPTION", consumption)
+                        intent.putExtra(KEY_EFFICIENCY,consumption)
+                        intent.putExtra(KEY_FUEL)
+                        intent.putExtra(KEY_KM)
                         startActivity(intent)
                     } else {
                         carEditText.error = "Fuel consumption must be a positive number."
