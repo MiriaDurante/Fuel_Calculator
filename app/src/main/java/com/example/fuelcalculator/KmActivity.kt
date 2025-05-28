@@ -24,7 +24,7 @@ class KmActivity : AppCompatActivity() {
                 kmEditText.error = "Please enter a distance."
             } else {
                 try {
-                    val km = kmValue.toDouble()
+                    val km:Float = kmValue.toFloat()
                     if (km > 0) {
                         val intent = Intent(this, FuelActivity::class.java)
                         intent.putExtra(KEY_KM,km)

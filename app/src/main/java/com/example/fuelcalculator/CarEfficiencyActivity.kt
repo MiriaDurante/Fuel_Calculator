@@ -28,14 +28,17 @@ class CarEfficiencyActivity : AppCompatActivity() {
                 carEditText.error = "Please enter your car's fuel consumption."
             } else {
                 try {
-                    val consumption = carValue.toDouble()
+                    val consumption = carValue.toFloat()
                     if (consumption > 0) {
 
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra("CAR_CONSUMPTION", consumption)
                         intent.putExtra(KEY_EFFICIENCY,consumption)
-                        intent.putExtra(KEY_FUEL)
-                        intent.putExtra(KEY_KM)
+                        println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA$consumption")
+                        intent.putExtra(KEY_FUEL, fuel)
+                        println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA$fuel")
+                        intent.putExtra(KEY_KM, km)
+                        println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA$km")
                         startActivity(intent)
                     } else {
                         carEditText.error = "Fuel consumption must be a positive number."
