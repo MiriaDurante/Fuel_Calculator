@@ -28,11 +28,12 @@ class FuelActivity : AppCompatActivity() {
                     FuelEditText.error = "Please enter a distance."
                 } else {
                     try {
-                        val fuel = FuelValue.toDouble()
+                        val fuel:Float = FuelValue.toFloat()
+                        println("BBBBBBBBBBBBBBBBBBBBBBBB$fuel")
                         if (fuel > 0) {
                             val intent = Intent(this, CarEfficiencyActivity::class.java)
                             intent.putExtra(KEY_FUEL,fuel)
-                            intent.putExtra(KEY_KM)
+                            intent.putExtra(KEY_KM, km)
                             startActivity(intent)
                         } else {
 
